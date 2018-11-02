@@ -90,7 +90,7 @@ main {
 a.btn, .submit-survey {
   border: 1px outset #ffffff;
   border-radius: 25px;
-  background-color: #70a9ff;
+  background-color: #1d64ce;
   color: #ffffff;
   opacity: .9;
   padding: 23px;
@@ -98,11 +98,11 @@ a.btn, .submit-survey {
   color: white; }
   a.btn:active, .submit-survey:active {
     border-style: inset;
-    background-color: #70a9ff;
+    background-color: #1d64ce;
     opacity: 1; }
   a.btn:focus, .submit-survey:focus {
     outline: none;
-    box-shadow: 0 0 4px 4px #70a9ffb0; }
+    box-shadow: 0 0 4px 4px #1d64ceb0; }
   a.btn:visited, .submit-survey:visited {
     color: white; }
 
