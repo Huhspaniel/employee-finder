@@ -39,10 +39,12 @@ main {
         font-size: 35px;
     }
     h2 {
-        font-size: 30px;
+        font-size: 28px;
         margin: 0 40px;
         text-align: center;
+    }
 
+    &.home h2 {
         border-top: 2px solid #303030;
         padding-top: 10px;
     }
@@ -53,12 +55,31 @@ main {
             width: 100%;
         }
 
+        .about-you {
+            box-sizing: border-box;
+            padding: 30px;
+            text-align: left;
+            border: solid #303030;
+            border-width: 1px 0;
+            > * {
+                text-align: left;
+                margin: 5px;
+                margin-left: 0;
+            }
+            h2 {
+                margin: 5px 15px 15px 0;
+            }
+            input {
+                width: 80%;
+                font-size: 15px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+
         .questions > * {
             margin: 20px;
             text-align: left;
-            h2 {
-                border: none;
-            }
             > * {
                 width: max-content;
                 max-width: 100%;
@@ -98,11 +119,10 @@ main {
 }
 
 a.btn, .submit-survey {
-    border: 1px outset #eeeeee;
+    border: 1px outset #ffffff;
     border-radius: 25px;
     background-color: rgb(112, 169, 255);
     color: #ffffff;
-    box-shadow: 0 0 10px rgb(112, 169, 255);
 
     opacity: .9;
     &:active {
@@ -112,7 +132,7 @@ a.btn, .submit-survey {
     }
     &:focus {
         outline: none;
-        box-shadow: 0 0 10px black;
+        box-shadow: 0 0 4px 4px #70a9ffb0;
     }
     padding: 23px;
     font-size: 23px;
