@@ -53,6 +53,11 @@ main {
         border: none;
         width: 80%;
         font-size: 15px; }
+    main.survey .submit-survey {
+      max-width: 300px;
+      cursor: pointer;
+      margin: 0 30px 30px;
+      align-self: flex-start; }
   main header {
     box-sizing: border-box;
     width: 100%;
@@ -66,7 +71,7 @@ main {
       grid-column: 2;
       text-align: center; }
 
-a.btn {
+a.btn, .submit-survey {
   border: 1px outset #eeeeee;
   border-radius: 25px;
   background-color: #70a9ff;
@@ -76,14 +81,14 @@ a.btn {
   padding: 23px;
   font-size: 23px;
   color: white; }
-  a.btn:active {
+  a.btn:active, .submit-survey:active {
     border-style: inset;
     background-color: #70a9ff;
     opacity: 1; }
-  a.btn:focus {
+  a.btn:focus, .submit-survey:focus {
     outline: none;
     box-shadow: 0 0 10px black; }
-  a.btn:visited {
+  a.btn:visited, .submit-survey:visited {
     color: white; }
 
 footer {

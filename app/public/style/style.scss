@@ -71,6 +71,12 @@ main {
                 font-size: 15px;
             }
         }
+        .submit-survey {
+            max-width: 300px;
+            cursor: pointer;
+            margin: 0 30px 30px;
+            align-self: flex-start;
+        }
     }
 
     header {
@@ -91,7 +97,7 @@ main {
     }
 }
 
-a.btn {
+a.btn, .submit-survey {
     border: 1px outset #eeeeee;
     border-radius: 25px;
     background-color: rgb(112, 169, 255);
