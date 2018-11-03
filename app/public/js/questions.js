@@ -30,10 +30,11 @@ class Select {
         this.node = document.createElement('SELECT');
         const defaultOption = new Option({
             text: 'Select an Option',
+            value: '',
             selected: true,
             disabled: true
         });
-        this.add(defaultOption);
+        // this.add(defaultOption);
         this.addOptions(max);
         return this.node;
     }
@@ -45,7 +46,7 @@ class Select {
                 props.text = i;
                 props.value = i;
             } else {
-                props.text = i + `(Strongly ${(i == 1) ? 'Disagree' : 'Agree'})`,
+                props.text = i + ` (Strongly ${(i == 1) ? 'Disagree' : 'Agree'})`,
                     props.value = i;
             }
             this.add(new Option(props));

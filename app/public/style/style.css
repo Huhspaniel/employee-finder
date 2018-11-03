@@ -12,6 +12,13 @@ a {
   a:active {
     color: #ff5e5e; }
 
+.error p {
+  color: red;
+  padding: 0 0 15px 30px; }
+
+.highlight-error {
+  box-shadow: 0 0 4px 4px red; }
+
 main {
   margin-top: 10px;
   grid-area: 1 / 1 / 1 / -1;
