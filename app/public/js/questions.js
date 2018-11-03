@@ -34,7 +34,7 @@ class Select {
             selected: true,
             disabled: true
         });
-        // this.add(defaultOption);
+        this.add(defaultOption);
         this.addOptions(max);
         return this.node;
     }

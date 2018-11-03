@@ -9,6 +9,7 @@ const errorBox = document.querySelector('.error');
 const questionsBox = document.querySelector('.questions');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal button');
+const dim = document.querySelector('.dim');
 
 function getAbout() {
     const name = userName.value;
@@ -65,10 +66,10 @@ submit.addEventListener('click', (e) => {
         postUser.setRequestHeader('Content-Type', 'application/json');
         postUser.onload = () => {
             const match = JSON.parse(postUser.response);
-            console.log(match);
             modal.querySelector('img').setAttribute('src', match.photo);
             modal.querySelector('h2').innerText = match.name;
             modal.style.display = 'flex';
+            dim.style.display = 'initial';
         };
         postUser.send(JSON.stringify({
             name: about.name,
@@ -83,4 +84,5 @@ submit.addEventListener('click', (e) => {
 closeModal.addEventListener('click', (e) => {
     e.preventDefault();
     modal.style.display = 'none';
+    dim.style.display = 'none';
 })
