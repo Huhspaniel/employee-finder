@@ -10,7 +10,7 @@ app.use(express.json());
 require('./app/routes/apiRoutes')(app);
 require('./app/routes/htmlRoutes')(app);
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || PORT, function() {
     console.log(`App listening on http://localhost:${PORT}`);
 })
 
