@@ -26,6 +26,15 @@ a {
     box-shadow: 0 0 4px 4px red;
 }
 
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 28px;
+    margin: 0 40px;
+    text-align: center;
+}
+
 main {
     margin-top: 10px;
     grid-area: 1 / 1 / 1 / -1;
@@ -43,15 +52,6 @@ main {
     align-items: center;
 
     box-shadow: 0 0 5px black;
-
-    h1 {
-        font-size: 35px;
-    }
-    h2 {
-        font-size: 28px;
-        margin: 0 40px;
-        text-align: center;
-    }
 
     &.home h2 {
         border-top: 2px solid #303030;
@@ -148,6 +148,43 @@ a.btn, .submit-survey {
     color: white;
     &:visited {
         color: white;
+    }
+}
+
+.modal {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 black;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -250px;
+    margin-left: -250px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    button {
+        position: fixed;
+        font-size: 15px;
+        top: 50vh;
+        margin-top: -245px;
+        left: 50vw;
+        margin-left: -245px;
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    h2 {
+        margin: 0;
     }
 }
 

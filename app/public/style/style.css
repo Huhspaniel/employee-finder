@@ -19,6 +19,14 @@ a {
 .highlight-error {
   box-shadow: 0 0 4px 4px red; }
 
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 28px;
+  margin: 0 40px;
+  text-align: center; }
+
 main {
   margin-top: 10px;
   grid-area: 1 / 1 / 1 / -1;
@@ -34,12 +42,6 @@ main {
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 0 5px black; }
-  main h1 {
-    font-size: 35px; }
-  main h2 {
-    font-size: 28px;
-    margin: 0 40px;
-    text-align: center; }
   main.home h2 {
     border-top: 2px solid #303030;
     padding-top: 10px; }
@@ -112,6 +114,35 @@ a.btn, .submit-survey {
     box-shadow: 0 0 4px 4px #1d64ceb0; }
   a.btn:visited, .submit-survey:visited {
     color: white; }
+
+.modal {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 black;
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  height: 500px;
+  width: 500px;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -250px;
+  margin-left: -250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .modal button {
+    position: fixed;
+    font-size: 15px;
+    top: 50vh;
+    margin-top: -245px;
+    left: 50vw;
+    margin-left: -245px; }
+  .modal img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; }
+  .modal h2 {
+    margin: 0; }
 
 footer {
   box-sizing: border-box;

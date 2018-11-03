@@ -7,6 +7,8 @@ const userName = document.querySelector('.user-name');
 const userPhoto = document.querySelector('.user-img');
 const errorBox = document.querySelector('.error');
 const questionsBox = document.querySelector('.questions');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal button');
 
 function getAbout() {
     const name = userName.value;
@@ -52,11 +54,6 @@ function clearError() {
 }
 
 const postUser = new XMLHttpRequest();
-postUser.open('POST', '/api/employees');
-postUser.setRequestHeader('Content-Type', 'application/json');
-postUser.onload = () => {
-    console.log(JSON.parse(postUser.response));
-};
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     try {
@@ -64,6 +61,15 @@ submit.addEventListener('click', (e) => {
         const scores = getScores();
         clearInput();
 
+        postUser.open('POST', '/api/employees');
+        postUser.setRequestHeader('Content-Type', 'application/json');
+        postUser.onload = () => {
+            const match = JSON.parse(postUser.response);
+            console.log(match);
+            modal.querySelector('img').setAttribute('src', match.photo);
+            modal.querySelector('h2').innerText = match.name;
+            modal.style.display = 'flex';
+        };
         postUser.send(JSON.stringify({
             name: about.name,
             photo: about.photo,
@@ -74,3 +80,7 @@ submit.addEventListener('click', (e) => {
         throw err;
     }
 });
+closeModal.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.display = 'none';
+})
