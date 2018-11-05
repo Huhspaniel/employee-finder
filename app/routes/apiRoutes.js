@@ -1,4 +1,5 @@
-employees = require('../data/employees');
+const employees = require('../data/employees');
+const validate = require('validate.js');
 
 function getTotalDifferences(userScores) {
     const totalDifferences = [];
@@ -28,7 +29,29 @@ module.exports = function (app) {
     });
 
     app.post('/api/employees', (req, res) => {
-        res.json(getBestMatch(req.body));
-        employees.push(req.body);
+        const errors = validate(req.body, {
+            name: {
+                presence: true,
+                length: {
+                    minimum: 2,
+                    maximum: 30
+                },
+                format: {
+                    pattern: "^[a-z ,.'-]+$",
+                    flags: 'i',
+                    message: 'Name may only contain alphabet characters'
+                }
+            },
+            photo: {
+                url: true
+            }
+        });
+        if (errors) {
+            res.json({ errors: errors });
+        } else {
+            req.body.name = validate.capitalize(req.body.name);
+            res.json(getBestMatch(req.body));
+            employees.push(req.body);
+        }
     })
 }
